@@ -1,0 +1,9 @@
+.panelsCounters{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 0 auto 5vh ;
+  &__panel{
+    margin:  4vh;
+  }
+}

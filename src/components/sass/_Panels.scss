@@ -1,0 +1,17 @@
+.panelsInfo{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+  width: 800px;
+}
+
+.panelInfo{
+  margin: 0 20px;
+  background-color: pink;
+  cursor: pointer;
+}
+.panelInfo span{
+  display: block;
+  margin: 10px;
+}
