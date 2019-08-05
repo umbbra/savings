@@ -8,15 +8,14 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  height: 100vh;
+  background-image: url(../img/floor-tile.png);
+  background-attachment: fixed;
 }
 
 .panelsInfo {
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,41 +24,164 @@
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  margin: auto;
-  width: 800px;
+  margin: 2vh;
+  font-family: sans-serif;
 }
 
-.panelInfo {
+.panelsInfo__panel {
+  font-size: 1.8rem;
+  padding: 5vh 2vh;
   margin: 0 20px;
-  background-color: pink;
+  background-color: rgba(127, 136, 141, 0.753);
+  -webkit-box-shadow: 0 0 2px 1px black;
+          box-shadow: 0 0 2px 1px black;
   cursor: pointer;
+  opacity: 0.9;
+  -webkit-transition: .2s;
+  transition: .2s;
+  width: 90vw;
+  background-image: url(../img/money-bgc.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  text-shadow: 0 0 5px black;
 }
 
-.panelInfo span {
+.panelsInfo__panel:hover {
+  opacity: 1;
+}
+
+.panelsInfo__panel span {
   display: block;
   margin: 10px;
 }
 
-button {
-  width: 15vw;
-  height: 6vh;
-  font-size: 1.8rem;
-  cursor: pointer;
+.headerForm {
+  background-color: #363636;
+  padding: 2vh 1vw;
+  color: white;
 }
 
-.panelsCounters {
+.headerForm__slogan {
+  font-size: 2rem;
+  margin: 0.5;
+}
+
+.headerForm .form {
+  margin: auto 3vw;
+  color: #b9b9b9;
+}
+
+.headerForm .form__label {
+  font-size: 1.5rem;
+  font-family: sans-serif;
+}
+
+.headerForm .form__label__aim, .headerForm .form__label__price {
+  color: white;
+  font-size: 1.5rem;
+  padding: 1vh 0 1vh 2vh;
+  margin: 3vh;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #818181;
+  width: 75vw;
+}
+
+.headerForm .form__label__aim:focus, .headerForm .form__label__price:focus {
+  border-color: white;
+}
+
+.headerForm .form__label__price {
+  width: 30vw;
+}
+
+.headerForm .form__button {
+  color: white;
+  width: 65vw;
+  height: 7vh;
+  font-size: 1.4rem;
+  border: 2px solid white;
+  border-radius: 7px;
+  background-color: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+  opacity: 0.5;
+}
+
+.headerForm .form__button:hover {
+  opacity: 1;
+}
+
+.counters .panelsCounters {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
   margin: 0 auto 5vh;
+  font-family: sans-serif;
+  font-size: 1.5rem;
 }
 
-.panelsCounters__panel {
-  margin: 4vh;
+.counters .panelsCounters__panel {
+  width: 80vw;
+  height: 20vh;
+  background-color: rgba(255, 255, 255, 0.575);
+  -webkit-box-shadow: 0 0 3px 1px grey;
+          box-shadow: 0 0 3px 1px grey;
+  margin: 3vh auto;
+  padding: 0 2vh 2vh;
+}
+
+.counters__form {
+  background-color: rgba(54, 54, 54, 0.884);
+  padding: 2vh 1vw;
+  color: white;
+}
+
+.counters__form__input {
+  color: #fff;
+  font-size: 1.5rem;
+  width: 30%;
+  border: none;
+  border-bottom: 2px solid gray;
+  background-color: transparent;
+}
+
+.counters__form__input:focus {
+  border-color: white;
+}
+
+.counters__form__button {
+  margin: 2vh 0 2vh 4vh;
+  color: white;
+  width: 30vw;
+  height: 6vh;
+  font-size: 1.2rem;
+  border: 2px solid white;
+  border-radius: 7px;
+  background-color: rgba(54, 54, 54, 0.945);
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+  opacity: 0.6;
+}
+
+.counters__form__button:hover {
+  opacity: 1;
+}
+
+.footer {
+  font-size: 1rem;
 }
 /*# sourceMappingURL=App.css.map */

@@ -22,16 +22,16 @@ class FormSaving extends Component {
   render() { 
     const {aim, price} = this.state;
     return ( 
-      <div>
-        <h1>Welcome in savings application!</h1>
-        <form>
-          Please, write what is your aim:
-          <input type="text" value={this.state.aim} onChange={this.handleInput} name="aim" required/>
+      <div className="headerForm">
+        <h1 className="headerForm__slogan">Welcome in savings application!</h1>
+        <form className="form">
+          <label className="form__label"> Please, write what's your aim:
+          <input className="form__label__aim" type="text" value={this.state.aim} onChange={this.handleInput} name="aim" required/> </label>
            <br />
-           and how much it costs: 
-           <input type="number" value={this.state.price} onChange={this.handleInput} name="price" min="1" required/> $
+          <label className="form__label">and how much it costs: 
+           <input className="form__label__price" type="number" value={this.state.price} onChange={this.handleInput} name="price" min="1" required/> $ </label> 
            <br />
-           <button type="submit" onClick={(e)=> {
+           <button className="form__button" type="submit" onClick={(e)=> {
              e.preventDefault();
              this.props.saveInformation(aim, price)
            }}>Let's go!</button>

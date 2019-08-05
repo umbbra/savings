@@ -1,9 +1,55 @@
-.panelsCounters{
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  margin: 0 auto 5vh ;
-  &__panel{
-    margin:  4vh;
+.counters{
+ 
+  .panelsCounters{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto 5vh ;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    &__panel{
+      width: 80vw;
+      height: 20vh;
+      background-color: rgba(255, 255, 255, 0.575);
+      box-shadow: 0 0 3px 1px grey;
+      margin: 3vh auto;
+      padding: 0 2vh 2vh;
+     
+     }
   }
+  &__form{
+    background-color: rgba(54, 54, 54, 0.884);
+    padding: 2vh 1vw;
+    color: white;
+
+  &__input{
+    color: #fff;
+    font-size: 1.5rem;
+    width: 30%;
+    border: none;
+    border-bottom: 2px solid gray;
+    background-color: transparent;
+    &:focus{
+      border-color: white;
+    }
+  }
+  &__button{
+     margin: 2vh 0 2vh 4vh;
+    color: white;
+    width: 30vw;
+    height: 6vh;
+    font-size: 1.2rem;
+    border: 2px solid white;
+    border-radius: 7px;
+    background-color: rgba(54, 54, 54, 0.945);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .3s;
+    opacity: 0.6;
+    &:hover{
+      opacity: 1;
+    }
+  }
+}
 }

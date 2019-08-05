@@ -1,17 +1,33 @@
 .panelsInfo{
+  color: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
   align-content: center;
-  margin: auto;
-  width: 800px;
+  margin: 2vh;
+  font-family: sans-serif;
+  &__panel{
+    font-size: 1.8rem;
+    padding: 5vh 2vh;
+    margin: 0 20px;
+    background-color: rgba(127, 136, 141, 0.753);
+    box-shadow: 0 0 2px 1px black;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: .2s;
+    width:90vw;
+    background-image: url(../img/money-bgc.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-shadow: 0 0 5px black;
+    &:hover{
+     opacity: 1;
+    }
+    
+    span{
+      display: block;
+      margin: 10px;
+    }
+    
+  }
 }
 
-.panelInfo{
-  margin: 0 20px;
-  background-color: pink;
-  cursor: pointer;
-}
-.panelInfo span{
-  display: block;
-  margin: 10px;
-}

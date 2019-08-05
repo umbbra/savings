@@ -4,12 +4,17 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-content: center;
-  height: 100vh;
+  // height: 100vh;
+  background-image: url(../img/floor-tile.png);
+ background-attachment: fixed;
 }
 
 @import 'Panels';
 @import 'FormSaving';
 @import 'Counters';
+@import 'Footer';
 
+.footer{
+  font-size: 1rem;
+}

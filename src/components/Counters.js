@@ -10,7 +10,6 @@ class Counters extends Component{
   }
 
   handlePay = e => {
-    console.log('Wpłacono:' + e.target.value);
     this.setState({
       justPaidMoney: e.target.value * 1,
       remains: this.props.price,
@@ -20,12 +19,16 @@ class Counters extends Component{
 
   handleCounter = e => {
     e.preventDefault();
+    if(this.state.justPaidMoney > this.state.remains || this.state.remains <= 0){
+      return console.log('Przykor nam...');
+    } else {
     this.setState(prev => ({
       howPayed: prev.howPayed + prev.justPaidMoney,
       remains: prev.remains - prev.justPaidMoney,
     }))
-
+    }
   }
+  
 
   render(){
     const remainsFromParent = this.props.price;
@@ -42,8 +45,10 @@ class Counters extends Component{
           {this.state.remains === 0 ? remainsFromParent : this.state.remains} $
         </div>
         </div>
-        <input type="number" value={this.state.justPaidMoney} onChange={this.handlePay} /> $
-        <button onClick={this.handleCounter}>Save</button>
+        <div className="counters__form">
+        <input className="counters__form__input" type="number" value={this.state.justPaidMoney} onChange={this.handlePay} min="1" /> $
+        <button className="counters__form__button"onClick={this.handleCounter}>Save</button>
+        </div>
       </div>
     );
     }
