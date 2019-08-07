@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/savings/static/css/main.84014948.chunk.css",
+    "main.js": "/savings/static/js/main.7f064ec4.chunk.js",
+    "main.js.map": "/savings/static/js/main.7f064ec4.chunk.js.map",
+    "runtime~main.js": "/savings/static/js/runtime~main.caab05ac.js",
+    "runtime~main.js.map": "/savings/static/js/runtime~main.caab05ac.js.map",
+    "static/js/2.c39fed63.chunk.js": "/savings/static/js/2.c39fed63.chunk.js",
+    "static/js/2.c39fed63.chunk.js.map": "/savings/static/js/2.c39fed63.chunk.js.map",
+    "index.html": "/savings/index.html",
+    "precache-manifest.8a243679ee0bda4213d8dedf143a8a68.js": "/savings/precache-manifest.8a243679ee0bda4213d8dedf143a8a68.js",
+    "service-worker.js": "/savings/service-worker.js",
+    "static/css/main.84014948.chunk.css.map": "/savings/static/css/main.84014948.chunk.css.map",
+    "static/media/App.css": "/savings/static/media/money-bgc.74bc2e4f.jpg"
+  }
+}
