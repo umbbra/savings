@@ -63,7 +63,7 @@
 }
 
 .headerForm {
-  background-color: #363636;
+  background-color: #3f465e;
   padding: 2vh 1vw;
   color: white;
   max-width: 1200px;
@@ -114,7 +114,7 @@
   margin: 3vh;
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid #818181;
+  border-bottom: 2px solid #a7a7a7;
   border-radius: 3px;
   width: 75vw;
 }
@@ -126,19 +126,22 @@
 @media (min-width: 720px) {
   .headerForm .form__label__aim, .headerForm .form__label__price {
     font-size: 2rem;
-    width: 50vw;
+    width: 50%;
   }
 }
 
 .headerForm .form__label__price {
   width: 30vw;
+  max-width: 200px;
   text-align: center;
 }
 
 .headerForm .form__button {
   color: white;
   width: 65vw;
+  max-width: 250px;
   height: 7vh;
+  min-height: 50px;
   margin: 5vh;
   font-size: 1.4rem;
   border: 2px solid white;
@@ -195,9 +198,8 @@
 .counters .panelsCounters__panel {
   width: 80vw;
   height: 20vh;
-  background-color: rgba(255, 255, 255, 0.575);
-  -webkit-box-shadow: 0 0 3px 1px grey;
-          box-shadow: 0 0 3px 1px grey;
+  background-color: rgba(247, 252, 255, 0.575);
+  border: 1px solid #1d2335;
   margin: 3vh auto;
   padding: 0 2vh 2vh;
 }
@@ -216,7 +218,7 @@
 }
 
 .counters__form {
-  background-color: rgba(54, 54, 54, 0.884);
+  background-color: rgba(63, 70, 94, 0.884);
   padding: 2vh 1vw;
   color: white;
 }
@@ -225,6 +227,7 @@
   color: #fff;
   font-size: 1.5rem;
   width: 30%;
+  max-width: 250px;
   border: none;
   border-bottom: 2px solid gray;
   background-color: transparent;
@@ -239,6 +242,7 @@
   margin: 2vh 0 2vh 4vh;
   color: white;
   width: 30vw;
+  max-width: 250px;
   height: 6vh;
   font-size: 1.2rem;
   border: 2px solid white;

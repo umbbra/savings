@@ -2,52 +2,47 @@ import React, { Component } from 'react';
 
 
 class Counters extends Component{
-  
-    state = {
-    howPayed: 0,
-    remains: 0,
-    justPaidMoney:0
+ 
+  state={
+    payment:0,
+    // price: 0,
+    // moneySaved: 0,
+    // moneyToSavingYet: 0,
   }
 
-  handlePay = e => {
+  handlePayment = (e) =>{
     this.setState({
-      justPaidMoney: e.target.value * 1,
-      remains: this.props.price,
+      payment: e.target.value,
     })
-   
   }
-
-  handleCounter = e => {
-    e.preventDefault();
-    if(this.state.justPaidMoney > this.state.remains || this.state.remains <= 0){
-      return console.log('Przykor nam...');
-    } else {
-    this.setState(prev => ({
-      howPayed: prev.howPayed + prev.justPaidMoney,
-      remains: prev.remains - prev.justPaidMoney,
-    }))
-    }
-  }
-  
 
   render(){
-    const remainsFromParent = this.props.price;
-   
+      const { payment } = this.state;
     return ( 
       <div className="counters">
         <div className="panelsCounters">
         <div className="panelsCounters__panel">
          <h4> Saved money: </h4>
-         {this.state.howPayed} $
+          {this.props.moneySaved} $
         </div>
         <div className="panelsCounters__panel">
           <h4>It remains to the end: </h4>
-          {this.state.remains === 0 ? remainsFromParent : this.state.remains} $
+           {this.props.moneyToSavingYet}$
         </div>
         </div>
         <div className="counters__form">
-        <input className="counters__form__input" type="number" value={this.state.justPaidMoney} onChange={this.handlePay} min="1" /> $
-        <button className="counters__form__button"onClick={this.handleCounter}>Save</button>
+        <input className="counters__form__input" type="text" value={this.state.payment} onChange={this.handlePayment} min="1" /> $
+
+        <button 
+        className="counters__form__button" 
+        type="submit"
+        onClick={(e)=> {
+          e.preventDefault();
+          this.props.handleCount(payment)} 
+          }
+        >
+          Save
+        </button>
         </div>
       </div>
     );

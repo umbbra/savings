@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class FormSaving extends Component {
   state = { 
     aim : "",
-    price: "",
+    price: 0,
    }
 
    handleInput = (e) =>{
@@ -29,7 +29,7 @@ class FormSaving extends Component {
           <input className="form__label__aim" type="text" value={this.state.aim} onChange={this.handleInput} name="aim" required/> </label>
            <br />
           <label className="form__label">and how much it costs: 
-           <input className="form__label__price" type="number" value={this.state.price} onChange={this.handleInput} name="price" min="1" required/> $ </label> 
+           <input className="form__label__price" type="text" value={this.state.price} onChange={this.handleInput} name="price" min="1" required/> $ </label> 
            <br />
            <button className="form__button" type="submit" onClick={(e)=> {
              e.preventDefault();
