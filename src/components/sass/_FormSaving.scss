@@ -2,19 +2,33 @@
   background-color: rgb(54, 54, 54);
   padding: 2vh 1vw;
   color: white;
-
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 0 2px 2px gray;
 
   &__slogan{
     font-size: 2rem;
     margin: 0.5;
+    font-family: 'PT Sans', sans-serif;
+    @media(min-width: 720px){
+      font-size: 2.5rem;
+    }
   }
   .form{
     margin: auto 3vw;
     color: rgb(185, 185, 185);
+    font-family: 'Open Sans', sans-serif;
+    @media(min-width: 500px){
+      margin: auto 5.5vw;
+    }
+    @media(min-width: 1400px){
+      margin: auto 10vw;
+      
+    }
     &__label{
       font-size: 1.5rem;
-      font-family: sans-serif;
-
+      
       &__aim{
         color: white;
         font-size: 1.5rem;
@@ -23,20 +37,27 @@
         background-color: transparent;
         border:none;
         border-bottom: 2px solid rgb(129, 129, 129);
+        border-radius: 3px;
         width: 75vw;
         &:focus{
           border-color: white;
+        }
+        @media(min-width: 720px){
+          font-size: 2rem;
+          width: 50vw;
         }
       }
       &__price{
        @extend .form__label__aim;
        width: 30vw;
+       text-align: center;
       }
     }
     &__button{
       color: white;
       width: 65vw;
       height: 7vh;
+      margin: 5vh;
       font-size: 1.4rem;
       border: 2px solid white;
       border-radius: 7px;
@@ -47,6 +68,9 @@
       opacity: 0.5;
       &:hover{
          opacity: 1;
+      }
+      @media(min-width: 720px){
+        width: 40vw;
       }
     }
   }

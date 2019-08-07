@@ -1,13 +1,16 @@
 .counters{
- 
+  font-family: 'PT Sans', sans-serif;
   .panelsCounters{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
     margin: 0 auto 5vh ;
-    font-family: sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     font-size: 1.5rem;
+    @media(min-width: 1024px){
+      flex-direction: row;
+    }
     &__panel{
       width: 80vw;
       height: 20vh;
@@ -15,7 +18,13 @@
       box-shadow: 0 0 3px 1px grey;
       margin: 3vh auto;
       padding: 0 2vh 2vh;
-     
+      @media(min-width: 720px){
+        width: 50vw;
+      }
+      @media(min-width: 1024px){
+        width: 30vw;
+        margin: 3vh;
+      }
      }
   }
   &__form{
@@ -30,6 +39,7 @@
     border: none;
     border-bottom: 2px solid gray;
     background-color: transparent;
+    text-align: center;
     &:focus{
       border-color: white;
     }

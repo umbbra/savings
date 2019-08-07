@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Blinker|Noto+Sans|Open+Sans|PT+Sans&display=swap");
 .App {
   text-align: center;
   font-size: 2rem;
@@ -25,7 +26,7 @@
   -ms-flex-line-pack: center;
       align-content: center;
   margin: 2vh;
-  font-family: sans-serif;
+  font-family: 'Blinker', sans-serif;
 }
 
 .panelsInfo__panel {
@@ -42,8 +43,8 @@
   width: 90vw;
   background-image: url(../img/money-bgc.jpg);
   background-repeat: no-repeat;
-  background-size: 100%;
-  text-shadow: 0 0 5px black;
+  background-size: cover;
+  text-shadow: 0px 0 5px black, 0px 0px 5px black,0px 0px 5px black;
 }
 
 .panelsInfo__panel:hover {
@@ -55,25 +56,55 @@
   margin: 10px;
 }
 
+@media (min-width: 720px) {
+  .panelsInfo__panel {
+    width: 60vw;
+  }
+}
+
 .headerForm {
   background-color: #363636;
   padding: 2vh 1vw;
   color: white;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 0 0 10px 10px;
+  -webkit-box-shadow: 0 0 2px 2px gray;
+          box-shadow: 0 0 2px 2px gray;
 }
 
 .headerForm__slogan {
   font-size: 2rem;
   margin: 0.5;
+  font-family: 'PT Sans', sans-serif;
+}
+
+@media (min-width: 720px) {
+  .headerForm__slogan {
+    font-size: 2.5rem;
+  }
 }
 
 .headerForm .form {
   margin: auto 3vw;
   color: #b9b9b9;
+  font-family: 'Open Sans', sans-serif;
+}
+
+@media (min-width: 500px) {
+  .headerForm .form {
+    margin: auto 5.5vw;
+  }
+}
+
+@media (min-width: 1400px) {
+  .headerForm .form {
+    margin: auto 10vw;
+  }
 }
 
 .headerForm .form__label {
   font-size: 1.5rem;
-  font-family: sans-serif;
 }
 
 .headerForm .form__label__aim, .headerForm .form__label__price {
@@ -84,6 +115,7 @@
   background-color: transparent;
   border: none;
   border-bottom: 2px solid #818181;
+  border-radius: 3px;
   width: 75vw;
 }
 
@@ -91,14 +123,23 @@
   border-color: white;
 }
 
+@media (min-width: 720px) {
+  .headerForm .form__label__aim, .headerForm .form__label__price {
+    font-size: 2rem;
+    width: 50vw;
+  }
+}
+
 .headerForm .form__label__price {
   width: 30vw;
+  text-align: center;
 }
 
 .headerForm .form__button {
   color: white;
   width: 65vw;
   height: 7vh;
+  margin: 5vh;
   font-size: 1.4rem;
   border: 2px solid white;
   border-radius: 7px;
@@ -112,6 +153,16 @@
 
 .headerForm .form__button:hover {
   opacity: 1;
+}
+
+@media (min-width: 720px) {
+  .headerForm .form__button {
+    width: 40vw;
+  }
+}
+
+.counters {
+  font-family: 'PT Sans', sans-serif;
 }
 
 .counters .panelsCounters {
@@ -128,8 +179,17 @@
   -ms-flex-line-pack: center;
       align-content: center;
   margin: 0 auto 5vh;
-  font-family: sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   font-size: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .counters .panelsCounters {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .counters .panelsCounters__panel {
@@ -140,6 +200,19 @@
           box-shadow: 0 0 3px 1px grey;
   margin: 3vh auto;
   padding: 0 2vh 2vh;
+}
+
+@media (min-width: 720px) {
+  .counters .panelsCounters__panel {
+    width: 50vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .counters .panelsCounters__panel {
+    width: 30vw;
+    margin: 3vh;
+  }
 }
 
 .counters__form {
@@ -155,6 +228,7 @@
   border: none;
   border-bottom: 2px solid gray;
   background-color: transparent;
+  text-align: center;
 }
 
 .counters__form__input:focus {
@@ -183,5 +257,6 @@
 
 .footer {
   font-size: 1rem;
+  font-family: 'PT Sans', sans-serif;
 }
 /*# sourceMappingURL=App.css.map */
