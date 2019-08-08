@@ -12,38 +12,85 @@ class App extends Component {
     payment: 0,
     moneySaved: 0,
     moneyToSavingYet: 0,
+  
+    errors: {
+      aim:  false,
+      price: false,
+      payment: false,
+    }
    }
 
   handleSaveInformation = (aim, price) =>{
-    // console.log(aim.length) ;
+
+    this.setState({
+      aim: "",
+      price: 0,
+      payment: 0,
+      moneySaved: 0,
+      moneyToSavingYet: 0,
+
+    errors: {
+      aim:  false,
+      price: false,
+      payment: false,
+    }
+    })
+  
     const reg = new RegExp('[A-Za-z]');
     const validAim = aim.search(reg);
     console.log(validAim);
 
-    if(aim.length > 2 && Number(price) >= 1 && validAim > -1) {
+    if(aim.length > 2 && validAim > -1) {
      this.setState({
       aim,
       price,
-      moneyToSavingYet: price,
     })
 
+    }    
+    else {
+      this.setState({
+        errors :{
+          aim: true,
+        }
+      })
+    }
+
+    if( Number(price) >= 1 ){
+    this.setState({
+          moneyToSavingYet: price,
+        })
     } else {
-      return alert("Za krótka nazwa celu (min.3 znaki) lub za mała kwota (min. 1$) !")
+      this.setState({
+        errors :{
+          price: true,
+        }
+      })
     }
 
   }
 
   handleCounter = (payment) =>{
-    if(Number(payment) > 1 && Number(payment) <= this.state.moneyToSavingYet){
+    this.setState({
+     errors: {
+      payment: false,
+      }
+    })
+    
+    if(Number(payment) >= 1 && Number(payment) <= this.state.moneyToSavingYet) {
       this.setState({
         payment,
-      })
-    }
-    else{
-    return alert('Wartość musi być liczbą większą od 1 i nie może być większa niż to co zostało do zaoszczędzenia');
-  }
+     })
+ 
+     }    
+     else {
+       return this.setState({
+         errors :{
+           payment: true,
+         }
+       })
+     }
 
-    this.setState((prev)=>({
+      this.setState((prev)=>({
       moneySaved : parseInt(prev.payment) + prev.moneySaved,
       moneyToSavingYet: prev.moneyToSavingYet - parseInt(prev.payment),
     }))
@@ -54,17 +101,33 @@ class App extends Component {
     Wpłata wynosi: ${this.state.payment}
     `);
   }
-
  
   render() { 
+    const style= {
+      color:'red',
+      fontSize: '15px',
+      display: 'block',
+      margin:0,
+      padding:0,
+    }
        return ( 
       <div className="App">
-          <FormSaving saveInformation={this.handleSaveInformation} />
-          <Panels aim={this.state.aim} price={this.state.price} />
+          <FormSaving 
+             saveInformation={this.handleSaveInformation} 
+             aimError={this.state.errors.aim}
+             priceError={this.state.errors.price}
+             style={style}
+          />
+          <Panels 
+            aim={this.state.aim} 
+            price={this.state.price} 
+          />
           <Counters 
             handleCount={this.handleCounter} 
             moneySaved={this.state.moneySaved}
             moneyToSavingYet={this.state.moneyToSavingYet}
+            paymentErr={this.state.errors.payment}
+            style={style}
           />
           <Footer />
       </div>

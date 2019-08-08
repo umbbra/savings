@@ -16,6 +16,9 @@ class Counters extends Component{
     })
   }
 
+   payment_incorrect = "Wpłata nie może zawierać liter ani być większa niż to, co pozostało";
+
+
   render(){
       const { payment } = this.state;
     return ( 
@@ -32,6 +35,7 @@ class Counters extends Component{
         </div>
         <div className="counters__form">
         <input className="counters__form__input" type="text" value={this.state.payment} onChange={this.handlePayment} min="1" /> $
+        {this.props.paymentErr && <span style={this.props.style}>{this.payment_incorrect} </span>} 
 
         <button 
         className="counters__form__button" 

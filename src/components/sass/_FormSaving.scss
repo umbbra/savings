@@ -28,7 +28,7 @@
     }
     &__label{
       font-size: 1.5rem;
-      
+
       &__aim{
         color: white;
         font-size: 1.5rem;
@@ -64,13 +64,14 @@
       font-size: 1.4rem;
       border: 2px solid white;
       border-radius: 7px;
-      background-color: transparent;
+      background-color: rgba(0, 0, 0, 0.534);
       text-transform: uppercase;
       cursor: pointer;
       transition: .3s;
       opacity: 0.5;
       &:hover{
          opacity: 1;
+         background-color: transparent;
       }
       @media(min-width: 720px){
         width: 40vw;
