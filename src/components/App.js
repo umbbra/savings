@@ -4,7 +4,6 @@ import React, {
 import FormSaving from './FormSaving';
 import Panels from './Panels';
 import Counters from './Counters';
-import PopupCongratulation from './Popup';
 import Footer from './Footer';
 import './css/App.css'
 
@@ -96,7 +95,7 @@ class App extends Component {
         payment,
       })
 
-    } else if(this.state.moneyToSavingYet === 0){
+    } else if(this.state.moneyToSavingYet === 0 && this.state.aim){
       return this.setState({
        isCong: true,
       })
@@ -147,7 +146,7 @@ class App extends Component {
       paymentErr = {this.state.errors.payment}
       style = {style}
       /> 
-      {this.state.isCongratulations && <PopupCongratulation aim={this.state.aim}/>} 
+      
       <Footer/>
      </div>
       );

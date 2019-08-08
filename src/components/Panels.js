@@ -1,5 +1,4 @@
 import React from 'react';
-// import PopupCongratulation from './Popup';
 import Panel from './Panel';
 
 
