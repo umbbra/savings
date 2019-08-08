@@ -16,6 +16,9 @@
     &__cong{
         color:rgb(0, 56, 0);
         font-size:  2rem;
+        @media(min-width: 500px){
+          font-size: 1.3rem;
+        }
       }
      &__close{
        padding: 1vh 2vh;
