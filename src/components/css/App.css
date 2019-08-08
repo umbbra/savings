@@ -29,6 +29,38 @@
   font-family: 'Blinker', sans-serif;
 }
 
+.panelsInfo .popup {
+  padding: 1.5vh 3.5vw;
+  font-family: 'Blinker', sans-serif;
+  background-color: rgba(47, 202, 189, 0.863);
+  border: 7px solid white;
+  -webkit-box-shadow: 0 0 2px #000;
+          box-shadow: 0 0 2px #000;
+}
+
+.panelsInfo .popup__cong {
+  color: #003800;
+  font-size: 2rem;
+}
+
+.panelsInfo .popup__close {
+  padding: 1vh 2vh;
+  font-size: 1.2rem;
+  background-color: #33c0b4;
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.panelsInfo .popup__close:hover {
+  background-color: #fff;
+  border: 2px solid #0f413c;
+  color: #1a5e58;
+}
+
 .panelsInfo__panel {
   font-size: 1.8rem;
   padding: 5vh 2vh;
@@ -203,6 +235,7 @@
   border: 1px solid #1d2335;
   margin: 3vh auto;
   padding: 0 2vh 2vh;
+  -webkit-padding-after: 7vh;
 }
 
 @media (min-width: 720px) {

@@ -5,6 +5,35 @@
   align-content: center;
   margin: 2vh;
   font-family: 'Blinker', sans-serif;
+
+  .popup{
+    padding: 1.5vh 3.5vw;
+    font-family: 'Blinker', sans-serif;
+    background-color: rgba(47, 202, 189, 0.863);
+    border: 7px solid white;
+    box-shadow: 0 0 2px #000;
+  
+    &__cong{
+        color:rgb(0, 56, 0);
+        font-size:  2rem;
+      }
+     &__close{
+       padding: 1vh 2vh;
+       font-size: 1.2rem;
+       background-color: rgb(51, 192, 180);
+       color: rgb(255, 255, 255);
+       border: 2px solid rgb(255, 255, 255);
+       border-radius: 5px;
+       cursor: pointer;
+       transition: .2s;
+       &:hover{
+        background-color: #fff;
+        border: 2px solid rgb(15, 65, 60);;
+        color:rgb(26, 94, 88);
+       }
+     } 
+  }
+
   &__panel{
     font-size: 1.8rem;
     padding: 5vh 2vh;
