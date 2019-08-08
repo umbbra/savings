@@ -16,7 +16,7 @@ class Counters extends Component{
     })
   }
 
-   payment_incorrect = "Wpłata nie może zawierać liter ani być większa niż to, co pozostało";
+   payment_incorrect = "The deposit can't contain letters and amount can't be larger than remains to the end";
 
 
   render(){

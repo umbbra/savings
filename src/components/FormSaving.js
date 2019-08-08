@@ -7,8 +7,8 @@ class FormSaving extends Component {
    }
 
    messanges = {
-    aim_incorrect: "Sprawdź czy nazwa celu posiada min.3 znaki oraz czy zawiera litery",
-    price_incorrect : "Sprawdź czy kwota wynosi conajmniej 1$",
+    aim_incorrect: "Check that the destination name has a minimum of 3 characters and contains letters",
+    price_incorrect : "Check if the amount is at least 1$ ",
    }
 
    handleInput = (e) =>{

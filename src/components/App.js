@@ -38,7 +38,7 @@ class App extends Component {
   
     const reg = new RegExp('[A-Za-z]');
     const validAim = aim.search(reg);
-    console.log(validAim);
+    
 
     if(aim.length > 2 && validAim > -1) {
      this.setState({
@@ -95,11 +95,7 @@ class App extends Component {
       moneyToSavingYet: prev.moneyToSavingYet - parseInt(prev.payment),
     }))
 
-    console.log('Obliczam...');
-    console.log(`
-    Pobrana wartość z formularza: ${this.state.price}
-    Wpłata wynosi: ${this.state.payment}
-    `);
+    
   }
  
   render() { 
