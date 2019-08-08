@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/savings/static/css/main.12b37076.chunk.css",
-    "main.js": "/savings/static/js/main.f3d0427c.chunk.js",
-    "main.js.map": "/savings/static/js/main.f3d0427c.chunk.js.map",
+    "main.js": "/savings/static/js/main.78682d27.chunk.js",
+    "main.js.map": "/savings/static/js/main.78682d27.chunk.js.map",
     "runtime~main.js": "/savings/static/js/runtime~main.caab05ac.js",
     "runtime~main.js.map": "/savings/static/js/runtime~main.caab05ac.js.map",
     "static/js/2.c39fed63.chunk.js": "/savings/static/js/2.c39fed63.chunk.js",
     "static/js/2.c39fed63.chunk.js.map": "/savings/static/js/2.c39fed63.chunk.js.map",
     "index.html": "/savings/index.html",
-    "precache-manifest.6bb964f866a13f9accbfb86092795d26.js": "/savings/precache-manifest.6bb964f866a13f9accbfb86092795d26.js",
+    "precache-manifest.8e4f076dd8ef8b3117582b4ef5f6c297.js": "/savings/precache-manifest.8e4f076dd8ef8b3117582b4ef5f6c297.js",
     "service-worker.js": "/savings/service-worker.js",
     "static/css/main.12b37076.chunk.css.map": "/savings/static/css/main.12b37076.chunk.css.map",
     "static/media/App.css": "/savings/static/media/money-bgc.74bc2e4f.jpg"
